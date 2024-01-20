@@ -3,6 +3,7 @@ name: Checks
 
 on: [push]
 
+
 jobs:
     test-lint:
         name: Test and Lint
@@ -15,6 +16,8 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
             - name: Checkout 
               uses: actions/checkout@v2
+              with:
+                token: ${{ secrets.WORKFLOW_TOKEN }}
             - name: Test
               run: docker-compose run --rm app sh -c "python manage.py test"
             - name: Lint
