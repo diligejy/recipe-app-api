@@ -16,3 +16,6 @@
     - Limit applied to all users
 - Authenticate with Docker Hub
     - 200 pulls per 6h all to ourselves!
+
+## 3. GitHub Token 관련
+- https://limm-jk.tistory.com/11
